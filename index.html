@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVEN11 - AI Automation Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-text">ELEVEN11</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">ELEVEN11</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo fade-in">
+                    <h1 class="company-name">ELEVEN11</h1>
+                    <p class="tagline">We are building systems that don't sleep,<br>So you can dream bigger</p>
+                </div>
+                <div class="hero-text fade-in">
+                    <h2 class="hero-headline">AI Chatbots That Boost Your Sales 24/7 🚀</h2>
+                    <p class="hero-subheadline">We help e-commerce brands increase sales & automate support using smart AI chatbots.</p>
+                </div>
+                <div class="hero-cta fade-in">
+                    <button class="btn btn--primary btn--lg cta-btn" onclick="scrollToSection('contact')">Book Free Demo</button>
+                    <button class="btn btn--outline btn--lg cta-btn" onclick="openFloatingChat()">Try Live Chatbot</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About ELEVEN11</h2>
+                <p class="section-subtitle">We are a new-age AI & Automation agency helping online stores save time, recover lost carts, and increase revenue with custom AI solutions.</p>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <div class="usp-icon">💰</div>
+                    <h3>Affordable for Small Businesses</h3>
+                    <p>Budget-friendly solutions that deliver real results without breaking the bank.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">🤝</div>
+                    <h3>Personalized Service</h3>
+                    <p>Not a giant faceless agency - we provide dedicated, personalized attention.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">⚡</div>
+                    <h3>Fast Setup Within 48 Hours</h3>
+                    <p>Quick deployment means you start seeing results almost immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive AI solutions to transform your e-commerce business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>AI Chatbots for E-Commerce</h3>
+                    <p>Automate FAQs, recommend products</p>
+                    <div class="service-features">
+                        <span>Product Recommendations</span>
+                        <span>FAQ Automation</span>
+                        <span>Customer Engagement</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Cart Recovery Bots</h3>
+                    <p>Remind customers on WhatsApp/Messenger</p>
+                    <div class="service-features">
+                        <span>Abandoned Cart Recovery</span>
+                        <span>Multi-Platform Support</span>
+                        <span>Personalized Messages</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Customer Support</h3>
+                    <p>24/7 instant answers</p>
+                    <div class="service-features">
+                        <span>Round-the-Clock Support</span>
+                        <span>Instant Responses</span>
+                        <span>Multi-Language Support</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Sales Automation</h3>
+                    <p>Smart upsell/cross-sell suggestions</p>
+                    <div class="service-features">
+                        <span>Intelligent Upselling</span>
+                        <span>Cross-sell Optimization</span>
+                        <span>Sales Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Three simple steps to transform your business</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Book a Free Demo Call</h3>
+                        <p>Schedule a consultation to discuss your needs</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>We Design & Integrate Your Chatbot</h3>
+                        <p>Our team creates and implements your custom solution</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>You Sell More, Stress Less 🚀</h3>
+                        <p>Enjoy increased sales and automated support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible pricing options to fit your business needs</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">$99 setup</div>
+                        <p>Basic FAQ bot</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Basic chatbot</li>
+                        <li>FAQ automation</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full-width" onclick="scrollToSection('contact')">Let's Talk</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Growth</h3>
+                        <div class="price">$199 setup + $49/mo</div>
+                        <p>Sales + Support bot</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Advanced chatbot</li>
+                        <li>Cart recovery</li>
+                        <li>Sales automation</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="btn btn--primary btn--full-width" onclick="scrollToSection('contact')">Let's Talk</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">Custom pricing</div>
+                        <p>Full AI Assistant (GPT-powered)</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Custom AI solution</li>
+                        <li>Advanced analytics</li>
+                        <li>24/7 support</li>
+                        <li>Full integration</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full-width" onclick="scrollToSection('contact')">Let's Talk</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Our AI in Action</h2>
+                <p class="section-subtitle">Test our chatbot below</p>
+            </div>
+            <div class="demo-container">
+                <div class="chatbot-demo" id="chatbot-demo">
+                    <div class="chatbot-header">
+                        <div class="chatbot-avatar">🤖</div>
+                        <div class="chatbot-info">
+                            <h4>ELEVEN11 AI Assistant</h4>
+                            <span class="status online">Online</span>
+                        </div>
+                    </div>
+                    <div class="chatbot-messages" id="chatbot-messages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" id="chat-input" placeholder="Type your message..." />
+                        <button id="send-button" class="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real results from real businesses</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"ELEVEN11's AI chatbot recovered $1,200 in abandoned carts in just 2 weeks!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍💼</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Fashion Store</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The setup was incredibly fast and our customer support is now 24/7 automated."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div class="author-info">
+                            <h4>Mike Chen</h4>
+                            <span>Electronics Shop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="nav-dot active" onclick="showTestimonial(0)"></button>
+                <button class="nav-dot" onclick="showTestimonial(1)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ready to Supercharge Your E-Commerce Store with AI?</h2>
+                <p class="section-subtitle">Get started today and see the difference AI can make</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Transform Your Business</h3>
+                    <p>Ready to boost your sales and automate your customer support? Let's talk about how ELEVEN11 can help your business grow.</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn--primary btn--lg">WhatsApp Us</a>
+                        <a href="mailto:hello@eleven11.com" class="btn btn--outline btn--lg">Email Us</a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" class="form-control" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us about your business and how we can help..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width btn--lg">Book Free Demo</button>
+                    </form>
+                    <div id="form-message" class="form-message hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">ELEVEN11</span>
+                    <p>Building systems that don't sleep</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ELEVEN11. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <div id="floating-chat-btn" class="floating-chat-btn">
+        <div class="chat-btn-icon">💬</div>
+        <div class="chat-btn-pulse"></div>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div id="floating-chat" class="floating-chat hidden">
+        <div class="floating-chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-details">
+                    <h4>ELEVEN11 AI</h4>
+                    <span class="chat-status">Online</span>
+                </div>
+            </div>
+            <button id="close-chat" class="close-chat-btn">×</button>
+        </div>
+        <div class="floating-chat-messages" id="floating-chat-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hi! I'm ELEVEN11's AI assistant. Ask me about our services! 🚀</p>
+                </div>
+            </div>
+        </div>
+        <div class="floating-chat-input">
+            <input type="text" id="floating-chat-input" placeholder="Ask me anything..." />
+            <button id="floating-send-button" class="floating-send-btn">→</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top hidden">↑</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
